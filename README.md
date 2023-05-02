@@ -1,4 +1,4 @@
-## How to Upload a Folder to Your GitHub Repository Using Termux
+## How to Upload a Folder to Your GitHub Repository On Android Using Termux
 
 To upload a folder and its files to a GitHub repository using Termux, you can follow these steps:
 
