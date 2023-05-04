@@ -83,6 +83,17 @@ To upload a folder and its files to a GitHub repository using Termux, you can fo
     ```
 
     Replace `main` with the name of your branch.
+ 
+ 
+💡 If you get this error `error: src refspec main does not match any` when using the `git push` command then run:
+
+    
+
+    git checkout -b main
+
+    
+
+Replace `main` with the name of your branch.
 
 After running these commands, your folder and its files will be uploaded to your GitHub repository. You can check your repository on the GitHub website to confirm that the files have been uploaded successfully.
 
