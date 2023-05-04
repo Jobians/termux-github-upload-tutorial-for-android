@@ -1,8 +1,14 @@
 ## How to Upload a Folder to Your GitHub Repository On Android Using Termux
 
+### Recommend apps to download:
+[Termux](https://f-droid.org/en/packages/com.termux/)
+
+[Material Files](https://play.google.com/store/apps/details?id=me.zhanghai.android.files) (for easy access to copy file path)
+
 To upload a folder and its files to a GitHub repository using Termux, you can follow these steps:
 
 1. Install Git and GitHub CLI by running the following command in Termux:
+
 
    ```
 
