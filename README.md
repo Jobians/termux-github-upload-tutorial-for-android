@@ -1,100 +1,133 @@
-## How to Upload a Folder to Your GitHub Repository On Android Using Termux
+## How to Upload a Folder to Your GitHub Repository on Android Using Termux
 
-### Recommend apps to download:
-[Termux](https://f-droid.org/en/packages/com.termux/)
+### Recommended Apps to Download:
 
-[Material Files](https://play.google.com/store/apps/details?id=me.zhanghai.android.files) (for easy access to copy file path)
+* [**Termux**](https://f-droid.org/en/packages/com.termux/)
+* [**Material Files**](https://play.google.com/store/apps/details?id=me.zhanghai.android.files) (for easy access to copy file paths)
 
-To upload a folder and its files to a GitHub repository using Termux, you can follow these steps:
+---
 
-1. Install Git and GitHub CLI by running the following command in Termux:
+### Step-by-Step Instructions:
 
+1. **Grant Storage Access to Termux**
+
+   Before anything else, run the following command in Termux to allow it to access your device’s storage:
 
    ```
+   termux-setup-storage
+   ```
 
+   Confirm the storage permission prompt.
+
+---
+
+2. **Install Git and GitHub CLI**
+
+   ```
    pkg install git gh
-
    ```
 
-2. Log in to your GitHub account using the `gh auth login` command:
+---
+
+3. **Log in to GitHub**
 
    ```
-
    gh auth login
-
    ```
 
-   Follow the prompts to enter your GitHub username and password. If you have two-factor authentication (2FA) enabled on your account, you will be prompted to enter a verification code.
+   Follow the on-screen prompts. If you have 2FA enabled, enter your verification code when asked.
 
-3. Navigate to the folder you want to upload to your GitHub repository using the `cd` command:
+---
 
-   ```
+4. **Navigate to Your Folder**
 
-   cd path/to/folder
-
-   ```
-
-4. Initialize a Git repository in the folder using the `git init` command:
+   Use the `cd` command to move into the folder you want to upload:
 
    ```
+   cd /path/to/folder
+   ```
 
+   *(Tip: Use Material Files to get the exact folder path.)*
+
+---
+
+5. **Initialize a Git Repository**
+
+   ```
    git init
-
    ```
 
-5. Add the files in the folder to the Git repository using the `git add .` command:
+---
+
+6. **Add Files to the Repository**
 
    ```
-
    git add .
-
    ```
 
-6. Commit the changes using the `git commit` command:
+---
+
+7. **Commit the Changes**
 
    ```
-
    git commit -m "Initial commit"
-
    ```
 
-   Replace "Initial commit" with a descriptive message for the changes you've made.
+   *(You can replace `"Initial commit"` with any custom message.)*
 
-7. Create a new GitHub repository or navigate to an existing repository where you want to upload your files.
+---
 
-8. Copy the SSH or HTTPS URL of your GitHub repository.
+8. **Create or Use a GitHub Repository**
 
-9. Add your GitHub repository as the remote repository for your local Git repository using the `git remote add origin` command:
+   Go to GitHub and create a new repository, or use an existing one.
+
+---
+
+9. **Set the Remote Repository**
+
+   Copy the **HTTPS** or **SSH** URL of your GitHub repo, then run:
 
    ```
-
-   git remote add origin <SSH or HTTPS URL>
-
+   git remote add origin <YOUR-REPO-URL>
    ```
 
-   Replace `<SSH or HTTPS URL>` with the URL of your GitHub repository.
+   Replace `<YOUR-REPO-URL>` with your actual repo URL.
 
-10. Push the files to the remote repository using the `git push` command:
+---
 
-    ```
+10. **Push Your Files to GitHub**
 
-    git push -u origin main
+```
+git push -u origin main
+```
 
-    ```
+**If you get this error:**
 
-    Replace `main` with the name of your branch.
- 
- 
-💡 If you get this error `error: src refspec main does not match any` when using the `git push` command then run:
+```
+error: src refspec main does not match any
+```
 
-    
+Run this command first:
 
-    git checkout -b main
+```
+git checkout -b main
+```
 
-    
+Then push again.
 
-Replace `main` with the name of your branch.
+---
 
-After running these commands, your folder and its files will be uploaded to your GitHub repository. You can check your repository on the GitHub website to confirm that the files have been uploaded successfully.
+### You're Done!
 
-- If you found this tutorial helpful, please consider subscribing to my [YouTube channel](https://youtube.com/@jobianstechie) to support my work! I create tech-related content that you might find useful, and I would really appreciate your support. Thank you for using my tutorial, and I hope it was helpful to you!
+Your folder and its contents should now be uploaded to your GitHub repository. Check GitHub via your browser to confirm.
+
+---
+
+**If this tutorial helped you, check out the [video tutorial](https://youtu.be/TvoCGz1MWdQ) for a step-by-step walkthrough.**
+And consider subscribing to my [YouTube channel](https://youtube.com/@jobianstechie) — I post helpful tech content regularly. Thanks for your support!
+
+## Support
+
+If you find my work helpful, you can support me by donating:
+
+[![Donate](https://img.shields.io/badge/Donate-Crypto-0070BA.svg)](https://cwallet.com/t/TE6A6KMV)
